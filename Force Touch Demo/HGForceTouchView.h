@@ -15,7 +15,7 @@
 - (void)viewDidForceTouched:(HGForceTouchView*)forceTouchView;
 @end
 
-@interface HGForceTouchView : UIScrollView <UIGestureRecognizerDelegate>
+@interface HGForceTouchView : UIScrollView
 {
     BOOL countPressing;
     NSTimer *mainTimer;
@@ -27,6 +27,7 @@
 
 @property(nonatomic, assign) id<HGForceTouchViewDelegate> forceTouchDelegate;
 
+@property UITouch *touchPosition;
 @property CGFloat lastX, lastY, lastZ, timePressing;
 
 @end

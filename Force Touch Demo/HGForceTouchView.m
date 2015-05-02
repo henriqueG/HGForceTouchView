@@ -22,8 +22,8 @@
         self = [[HGForceTouchView alloc] initWithFrame:frame];
     }
     
-//    self.containerView = [[UIView alloc] initWithFrame:self.bounds];
-//    [self addSubview:self.containerView];
+    //    self.containerView = [[UIView alloc] initWithFrame:self.bounds];
+    //    [self addSubview:self.containerView];
     
     [self start];
     
@@ -41,15 +41,16 @@
     self.lastY = 0;
     self.lastZ = 0;
     self.timePressing = 0;
+    countPressing = FALSE;
     
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
                                              withHandler:^(CMAccelerometerData  *accelerometerData, NSError *error) {
-         [self outputAccelertionData:accelerometerData.acceleration];
-         if(error){
-             
-             NSLog(@"%@", error);
-         }
-     }];
+                                                 [self outputAccelertionData:accelerometerData.acceleration];
+                                                 if(error){
+                                                     
+                                                     NSLog(@"%@", error);
+                                                 }
+                                             }];
 }
 
 -(void)outputAccelertionData:(CMAcceleration)acceleration
@@ -61,6 +62,7 @@
     }
     
     if (countPressing) {
+        countPressing = FALSE;
 
         if (((-self.lastZ) + acceleration.z) >= 0.05 || ((-self.lastZ) + acceleration.z) <= -0.05) {
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
@@ -71,7 +73,7 @@
     self.lastX = acceleration.x;
     self.lastY = acceleration.y;
     self.lastZ = acceleration.z;
-
+    
 }
 
 #pragma mark - HGScrollViewSlide delegate callers
@@ -89,14 +91,14 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     self.timePressing = 0.00f;
-    countPressing = FALSE;
     [mainTimer invalidate];
+    countPressing = FALSE;
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     self.timePressing = 0.00f;
-    countPressing = FALSE;
     [mainTimer invalidate];
+    countPressing = FALSE;
 }
 
 @end
