@@ -15,7 +15,6 @@
 		B8B2529A1AF43AB4005ED617 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8B252981AF43AB4005ED617 /* LaunchScreen.xib */; };
 		B8B252A61AF43AB4005ED617 /* Force_Touch_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B252A51AF43AB4005ED617 /* Force_Touch_DemoTests.m */; };
 		B8B252B11AF43B68005ED617 /* HGForceTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B252B01AF43B68005ED617 /* HGForceTouchView.m */; };
-		B8B252BD1AF46DBA005ED617 /* HGForceTouchRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B252BC1AF46DBA005ED617 /* HGForceTouchRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +43,6 @@
 		B8B252A51AF43AB4005ED617 /* Force_Touch_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Force_Touch_DemoTests.m; sourceTree = "<group>"; };
 		B8B252AF1AF43B68005ED617 /* HGForceTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGForceTouchView.h; sourceTree = "<group>"; };
 		B8B252B01AF43B68005ED617 /* HGForceTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGForceTouchView.m; sourceTree = "<group>"; };
-		B8B252BB1AF46DBA005ED617 /* HGForceTouchRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGForceTouchRecognizer.h; sourceTree = "<group>"; };
-		B8B252BC1AF46DBA005ED617 /* HGForceTouchRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGForceTouchRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +90,6 @@
 				B8B252911AF43AB4005ED617 /* ViewController.m */,
 				B8B252AF1AF43B68005ED617 /* HGForceTouchView.h */,
 				B8B252B01AF43B68005ED617 /* HGForceTouchView.m */,
-				B8B252BB1AF46DBA005ED617 /* HGForceTouchRecognizer.h */,
-				B8B252BC1AF46DBA005ED617 /* HGForceTouchRecognizer.m */,
 				B8B252931AF43AB4005ED617 /* Main.storyboard */,
 				B8B252961AF43AB4005ED617 /* Images.xcassets */,
 				B8B252981AF43AB4005ED617 /* LaunchScreen.xib */,
@@ -229,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8B252BD1AF46DBA005ED617 /* HGForceTouchRecognizer.m in Sources */,
 				B8B252921AF43AB4005ED617 /* ViewController.m in Sources */,
 				B8B252B11AF43B68005ED617 /* HGForceTouchView.m in Sources */,
 				B8B2528F1AF43AB4005ED617 /* AppDelegate.m in Sources */,
@@ -428,6 +422,7 @@
 				B8B252AB1AF43AB4005ED617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8B252AC1AF43AB4005ED617 /* Build configuration list for PBXNativeTarget "Force Touch DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +431,7 @@
 				B8B252AE1AF43AB4005ED617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

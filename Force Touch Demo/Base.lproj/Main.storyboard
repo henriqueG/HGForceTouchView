@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBa-AO-O1u" customClass="HGForceTouchView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBa-AO-O1u" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="T1T-md-r3U"/>
+                            <constraint firstAttribute="trailing" secondItem="cBa-AO-O1u" secondAttribute="trailing" id="sB3-EJ-lBC"/>
+                            <constraint firstItem="cBa-AO-O1u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="uLO-GO-hIo"/>
+                            <constraint firstItem="cBa-AO-O1u" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="yb4-Jg-Ona"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forceTouchView" destination="cBa-AO-O1u" id="bHg-nb-2oJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

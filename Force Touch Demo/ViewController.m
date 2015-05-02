@@ -17,13 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    HGForceTouchRecognizer *recognizer = [[HGForceTouchRecognizer alloc] initWithTarget:self action:nil];
-    [recognizer setForceTouchDelegate:self];
-    [self.view addGestureRecognizer:recognizer];
+    [self.forceTouchView setForceTouchDelegate:self];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidForceTouched:(HGForceTouchRecognizer*)forceTouchView {
+- (void)viewDidForceTouched:(HGForceTouchView*)forceTouchView {
     
     for (UIView *views in self.view.subviews) {
         [views removeFromSuperview];

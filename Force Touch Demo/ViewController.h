@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HGForceTouchRecognizer.h"
+#import "HGForceTouchView.h"
 
-@interface ViewController : UIViewController <HGForceTouchRecognizerDelegate>
-//@property (nonatomic, retain) HGForceTouchView *forceTouchView;
+@interface ViewController : UIViewController <HGForceTouchViewDelegate>
+@property (nonatomic, retain) IBOutlet HGForceTouchView *forceTouchView;
 @end
 

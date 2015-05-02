@@ -30,6 +30,10 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [self start];
+}
+
 - (void)start {
     self.motionManager = [[CMMotionManager alloc] init];
     self.motionManager.accelerometerUpdateInterval = .1;
